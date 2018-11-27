@@ -6,17 +6,9 @@ using System.Xml.Serialization;
 
 namespace apiXmlToObject.Models
 {
-    [XmlType("Book")]
+    [XmlRoot(Namespace= "http://schemas.datacontract.org/2004/07/FakeRestAPI.Web.Models")]
     public class Book
     {
-        //xml.Replace("xmlns: i =\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.datacontract.org/2004/07/FakeRestAPI.Web.Models\", '');               
-        [XmlAttribute("xmlnst")]
-        public string Xmlnst { get; set; }
-
-        [XmlAttribute("xmlns")]
-        public string Xmlns { get; set; }
-
-
         [XmlElement("ID")]
         public int Id { get; set; }
 
